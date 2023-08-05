@@ -1,0 +1,107 @@
+
+<br><br>
+<div class="jumbotron container">
+  <br><br>
+  <h1 class="display-4" style="text-align: center;font-size:100px large;">Welcome to Vagabond Travel Agency</h1><br><br>
+  <p class="lead">your one-stop-shop for planning your next big adventure. Whether you're looking to backpack across Europe, explore the rainforests of South America, or immerse yourself in the rich cultures of Asia, we've got you covered.
+
+Our team of expert travel advisors is here to help you plan the trip of a lifetime, with personalized recommendations and insider tips to help you make the most of your travels. From budget-friendly accommodations to immersive cultural experiences, we'll help you design a trip that fits your unique interests and travel style.
+
+Take a look at our destination guides to get inspiration for your next trip, or check out our budget travel tips to learn how to save money on the road. We also offer resources for cultural immersion experiences, such as homestays, language immersion programs, and volunteer opportunities.
+
+At Vagabond Travel Agency, we believe that travel is a force for good, and we're committed to sustainable and responsible travel practices. We work with local communities to promote positive social and environmental impact, and we encourage our clients to travel responsibly and ethically.
+
+So why wait? Start planning your next adventure today with Vagabond Travel Agency. Contact us to get started, or browse our website for more information on our services and destinations. Happy travels!</p>
+</div>
+
+<br><br>
+<div id="carouselExampleCaptions" class="carousel slide"  >
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner cover">
+    <div class="carousel-item active">
+      <img src="assets/pxfuel.jpg" class="d-block w-100"  alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      <h5>VAGABOND THE WORLD IS YOURS </h5>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/pxfuel.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      <h5>Vaganond cover the world</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/pxfuel.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Vaganond cover the world</h5>
+       
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+
+<div class="container">
+  <h2 class="py-4">OUR PARTNERS</h2>
+
+  <div class="form-group mb-4">
+    <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+  </div>
+
+  <table class="table" *ngIf="(listusers | filter: searchText).length > 0; else noResults">
+    <colgroup>
+      <col width="5%">
+      <col width="*">
+      <col width="35%">
+      <col width="15%">
+    </colgroup>
+    <thead>
+      <tr>
+        
+        <th scope="col">Hotel name</th>
+        <th scope="col">Hotel  country</th>
+        <th scope="col">rate</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of listusers | filter: searchText; let i = index">
+        
+        <td>{{post.Hotel_Name}}</td>
+        <td>{{post.Hotel_country}}</td>
+        <td>{{post.rate}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noResults>
+    <p>No results found for "{{searchText}}".</p>
+  </ng-template>
+</div>
+
+
+
+
+
+              
+                
+
+              
+               

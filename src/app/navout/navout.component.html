@@ -1,0 +1,40 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
+    <div class="container-fluid"><div><img src="assets/logo.png" height=80px width=300px></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+   
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" type="button" (click)="gotoPage('home')">Home <i class="bi bi-house"></i></a>
+            
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"  type="button" (click)="gotoPage('review')">Reviews <i class="bi bi-pencil"></i></a>
+             </li>
+             <li class="nav-item">
+              <a class="nav-link active" aria-current="page"type="button" (click)="gotoPage('trips')">Trips <i class="bi bi-activity"></i></a>
+             </li>
+             <li class="nav-item">
+              <a class="nav-link active" aria-current="page" type="button" (click)="gotoPage('cart')">Cart <i class="bi bi-cart-fill"></i></a>
+             </li>
+            
+            <li class="nav-item"><a class="nav-link active" aria-current="page" type="button" (click)="gotoPage('nav')">logout <i class="bi bi-person-circle"></i></a> </li>
+            <form class="d-flex" role="search" action="functions.php" method="get">
+              <input class="form-contrwol me-2" type="search" placeholder="Search" name="Search" required>
+             <button class="button" type="submit" >Let's go -></button>
+            </form> 
+          </ul>
+          
+        
+        
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+  
+  <router-outlet></router-outlet>
+  
